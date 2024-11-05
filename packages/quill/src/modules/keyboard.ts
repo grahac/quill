@@ -87,7 +87,7 @@ class Keyboard extends Module<KeyboardOptions> {
     this.addBinding({ key: 'Enter', shiftKey: null }, this.handleEnter);
     this.addBinding(
       { key: 'Enter', metaKey: null, ctrlKey: null, altKey: null },
-      () => {},
+      () => {return true},
     );
     if (/Firefox/i.test(navigator.userAgent)) {
       // Need to handle delete and backspace for Firefox in the general case #1171
